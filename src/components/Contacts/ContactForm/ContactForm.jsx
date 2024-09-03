@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { FormField, SubBtn } from "./ContactForm.stlyed"
-import { addContact } from "../../redux/actions"
+import { addContact } from "../../../redux/actions"
 
 
 export const ContactForm = () => {

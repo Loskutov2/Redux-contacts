@@ -1,6 +1,6 @@
-import { Contact } from "components/Contact/Contact"
+import { Contact } from "components/Contacts/Contact/Contact"
 import { useSelector } from "react-redux"
-import { selectVisibleContacts } from "../../redux/selectors"
+import { selectVisibleContacts } from "../../../redux/selectors"
 import { List } from "./ContactList.styled"
 
 

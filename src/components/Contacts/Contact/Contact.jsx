@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { ContactUnit, DelBtn } from "./Contact.styled"
-import { removeContact } from "../../redux/actions"
+import { removeContact } from "../../../redux/actions"
 
 
 export const Contact = ({contact}) => {

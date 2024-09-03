@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { FilterField } from "./ContactsFilter.styled"
-import { setFilter } from "../../redux/actions"
+import { setFilter } from "../../../redux/actions"
 
 
 export const ContactsFilter = () => {

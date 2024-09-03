@@ -1,11 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { filterReducer } from "./filterSlice";
 import { contactsReducer } from "./contactsSlice";
+import { authReduser } from "./authSlice";
 
 
 export const store = configureStore({
     reducer: {
         contacts: contactsReducer,
-        filter: filterReducer
-      }
+        filter: filterReducer,
+        auth: authReduser
+      },
+      middleware: (getDefaultMiddleware) =>
+          getDefaultMiddleware({
+          serializableCheck: {
+          ignoredActions: ["tasks/addTask/fulfilled"]
+          }
+      })
 })

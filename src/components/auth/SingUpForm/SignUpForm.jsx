@@ -1,11 +1,11 @@
 import { useDispatch } from "react-redux";
-import { signUp } from "../../../redux/authSlice";
+import { signUp } from "../../../redux/authOperations";
 
 export const SignUpForm = () => {
     const dispatch = useDispatch()
     const handleSubmit = e => {
         e.preventDefault();
-        const form = e.currentTarget;
+        const form = e.target;
         dispatch(
           signUp({
             name: form.elements.name.value,
@@ -13,7 +13,6 @@ export const SignUpForm = () => {
             password: form.elements.password.value,
           })
         );
-        form.reset();
       };
   return (
       <form onSubmit={handleSubmit} autoComplete="off">

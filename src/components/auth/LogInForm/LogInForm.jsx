@@ -1,16 +1,17 @@
+import { useDispatch } from "react-redux";
+import { logIn } from "../../../redux/authOperations";
 
 export const LoginForm = () => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const handleSubmit = e => {
       e.preventDefault();
-      const form = e.currentTarget;
-    //   dispatch(
-    //     logIn({
-    //       email: form.elements.email.value,
-    //       password: form.elements.password.value,
-    //     })
-    //   );
+      const form = e.target;
+      const [email, password] = form.elements
+      dispatch(
+        logIn({email: email.value, password: password.value})
+      );
       form.reset();
+      form.style.backgroundColor = 'rgba(255, 49, 3, 0.671)';
     };
     return(
         <form  onSubmit={handleSubmit} autoComplete="off">

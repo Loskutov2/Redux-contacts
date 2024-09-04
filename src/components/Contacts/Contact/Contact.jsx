@@ -1,13 +1,13 @@
 import { useDispatch } from "react-redux"
 import { ContactUnit, DelBtn } from "./Contact.styled"
-import { removeContact } from "../../../redux/actions"
+import { deleteContact } from "../../../redux/operations"
 
 
 export const Contact = ({contact}) => {
     const dispatch = useDispatch()
     const handleRemove = (e) => {
         e.preventDefault()
-        dispatch(removeContact(contact.id))
+        dispatch(deleteContact(contact.id))
     }
     return(
         <ContactUnit key={contact.id}>

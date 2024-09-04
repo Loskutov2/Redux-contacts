@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { FormField, SubBtn } from "./ContactForm.stlyed"
-import { addContact } from "../../../redux/actions"
+import { addContact } from "../../../redux/operations"
 
 
 export const ContactForm = () => {
@@ -10,7 +10,7 @@ export const ContactForm = () => {
         e.preventDefault()
         const form = e.target
         const [name, num] = form.elements
-        dispatch(addContact(name.value, num.value))
+        dispatch(addContact({name:name.value, num:num.value}))
         form.reset()
     }
 

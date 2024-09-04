@@ -13,7 +13,7 @@ export const store = configureStore({
       middleware: (getDefaultMiddleware) =>
           getDefaultMiddleware({
           serializableCheck: {
-          ignoredActions: ["tasks/addTask/fulfilled"]
+          ignoredActions: ["contacts/addContact/fulfilled"]
           }
       })
 })

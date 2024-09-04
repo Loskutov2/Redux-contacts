@@ -1,10 +1,5 @@
-export const signUp = ({name, email, password}) => {
+export const logOut = () => {
     return {
-    type: "auth/signUp",
-    payload: {
-        name,
-        email,
-        password
+        type: "auth/logOut"
     }
-}
 }
